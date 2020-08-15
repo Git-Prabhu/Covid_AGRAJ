@@ -8,7 +8,7 @@ st.title('COVID AGRAJ Project - COVID Predictor')
 
 def user_input_features():
         gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
-        age = st.sidebar.selectbox("Select Age group",("0-14", "15-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75-84", "Over 84"))
+        age = st.sidebar.selectbox("Select Age group",("0-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75-84", "Above 85"))
         race = st.sidebar.selectbox("Select your Race",("White", "Black", "Asian", "LatinX", "American Indian/Alaskan Native", "Others"))
         state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colarado", "Connecticut","Delaware","Florida", "Georgia","Hawaii",
             "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
