@@ -55,7 +55,7 @@ st.text ("")
 st.text ("")
 st.text ("")
 
-st.subheader ('Your selections - User inputs (Development team pick values from input parameter dataframe):')
+st.subheader ('Your selections - User inputs (Development team, pick values from input parameter dataframe):')
 st.write(input_df)
 
 st.text ("")
