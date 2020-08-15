@@ -55,7 +55,7 @@ st.text ("")
 st.text ("")
 st.text ("")
 
-st.subheader ('Your selections (User inputs):')
+st.subheader ('Your selections - User inputs (Development team pick values from input parameter dataframe):')
 st.write(input_df)
 
 st.text ("")
@@ -65,11 +65,11 @@ st.text ("")
 
 
 st.write("""
-## Your chances of contracting Covid is...
+## Your chance of contracting Covid is...
 """)
 
 st.write("""
-### Need to insert image of dynamic Guage here...
+### Results will be displayed here...
 """)
 
 #st.write(pd.DataFrame({
