@@ -60,8 +60,7 @@ st.write(input_df)
 
 st.text ("")
 st.text ("")
-st.text ("")
-st.text ("")
+
 
 
 st.write("""
