@@ -40,7 +40,7 @@ st.sidebar.checkbox ("I understand the terms and conditions")
 
 st.sidebar.text ("")
 
-st.sidebar.button('Submit')
+#st.sidebar.button('Submit')
 
 #image = Image.open('sunrise.jpg')
 #st.Image (image, caption ='Your risk of Covid', use_column_width = True)
