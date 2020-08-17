@@ -41,7 +41,7 @@ def get_gender(gender):
               data = '80%'
        x = data
        return x
-x = get_gender(gender)
+output = get_gender(gender)
 
 
 st.sidebar.text ("")
@@ -78,7 +78,7 @@ st.text ("")
 st.write("""
 ## Your chance of dying from Covid is...
 """)
-st.write (x)
+st.write (output)
 
 st.write("""
 ### 60%
