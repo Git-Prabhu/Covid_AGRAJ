@@ -38,12 +38,32 @@ input_df = user_input_features()
 def output_factors():
        data = None
        if gender == 'Male':
-               data = '60%'
+               data = 60
        else:
-               data = '40%'
+               data = 40
        x = data
        return x
-output_df = output_factors ()
+output_df1 = output_factors ()
+
+def output_race():
+        data = None
+        if race == 'White':
+            data = 8
+        elif race == 'Black':
+            data = 20
+        elif race == 'Asian':
+            data = 12
+        else:
+            data = 60
+        y = data
+        return y
+outputdf2 = output_race()
+
+def aggregate_calc():
+    data = ((output_df1*.40)+(outputdf2*.60))
+    z = data
+    return z
+output_df3 = aggregate_calc()
 
 
 st.sidebar.text ("")
@@ -80,7 +100,8 @@ st.text ("")
 st.write("""
 ## Your chance of dying from Covid is...
 """)
-st.write (output_df)
+
+st.write(output_df3)
 
 #st.write("""
 ### 60%
