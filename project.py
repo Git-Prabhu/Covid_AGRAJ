@@ -84,7 +84,7 @@ st.write("""
 #st.write (x)
 
 st.write("""
-### Results will be displayed here...
+### 60%
 """)
 
 #st.write(pd.DataFrame({
