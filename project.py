@@ -33,15 +33,15 @@ def user_input_features():
 
 input_df = user_input_features()
 
-#def output_factors():
-#       data = None
- #      if features.gender == 'Male':
-  #             data = '60%'
-   #    else:
-    #           data = '80%'
-     #  x = data
-      # return x
-#x = output_factors ()
+def get_gender(gender):
+##       data = None
+       if gender == 'Male':
+              data = '60%'
+       else:
+              data = '80%'
+       x = data
+       return x
+x = get_gender(gender)
 
 
 st.sidebar.text ("")
@@ -78,7 +78,7 @@ st.text ("")
 st.write("""
 ## Your chance of dying from Covid is...
 """)
-#st.write (x)
+st.write (x)
 
 st.write("""
 ### 60%
