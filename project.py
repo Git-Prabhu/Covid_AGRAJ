@@ -33,7 +33,7 @@ def user_input_features():
 
 input_df = user_input_features()
 
-def output_factors(result):
+def output_factors():
        data = None
        if features.gender == 'Male':
                data = '60%'
@@ -41,7 +41,7 @@ def output_factors(result):
                data = '80%'
        x = data
        return x
-x = output_factors (result)
+x = output_factors ()
 
 
 st.sidebar.text ("")
