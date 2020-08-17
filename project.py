@@ -76,7 +76,7 @@ st.text ("")
 
 
 st.write("""
-## Your chance of contracting Covid is...
+## Your chance of dying from Covid is...
 """)
 #st.write (x)
 
