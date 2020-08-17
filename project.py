@@ -36,11 +36,11 @@ input_df = user_input_features()
 def Output_factors(result):
         data = None
         if result == 'Black':
-                data = 60%
+                data = '60%'
         elif result == 'White':
-                data = 20%
+                data = '20%'
         else:
-                data = 20%
+                data = '20%'
         return data
 
 st.sidebar.text ("")
