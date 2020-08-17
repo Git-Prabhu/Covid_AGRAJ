@@ -33,6 +33,16 @@ def user_input_features():
 
 input_df = user_input_features()
 
+def Output_factors(result):
+        data = None
+        if result == 'Black':
+                data = 60%
+        elif result == 'White':
+                data = 20%
+        else:
+                data = 20%
+        return data
+
 st.sidebar.text ("")
 st.sidebar.text ("")
 
@@ -58,6 +68,7 @@ st.text ("")
 st.subheader ('Your selections - User inputs (Development team, pick values from input parameter dataframe):')
 st.write(input_df)
 
+
 st.text ("")
 st.text ("")
 
@@ -66,6 +77,7 @@ st.text ("")
 st.write("""
 ## Your chance of contracting Covid is...
 """)
+st.write (data)
 
 st.write("""
 ### Results will be displayed here...
