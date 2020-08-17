@@ -65,7 +65,6 @@ def aggregate_calc():
     return z
 output_df3 = aggregate_calc()
 
-
 st.sidebar.text ("")
 st.sidebar.text ("")
 
@@ -77,7 +76,6 @@ st.sidebar.text ("")
 
 #image = Image.open('sunrise.jpg')
 #st.Image (image, caption ='Your risk of Covid', use_column_width = True)
-
 
 #st.header("Image of Guage")
 #filename = "Gauge.png"
@@ -91,21 +89,14 @@ st.text ("")
 st.subheader ('Your selections - User inputs (Development team, pick values from input parameter dataframe):')
 st.write(input_df)
 
-
 st.text ("")
 st.text ("")
-
-
 
 st.write("""
 ## Your chance of dying from Covid is...
 """)
 
 st.write(output_df3)
-
-#st.write("""
-### 60%
-#""")
 
 #st.write(pd.DataFrame({
 #    'Raw score': [1, 2, 3, 4, 5, 6],
