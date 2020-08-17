@@ -33,18 +33,15 @@ def user_input_features():
 
 input_df = user_input_features()
 
-#def output_factors(result):
-#        data = None
-#       if race == 'Black':
-#               data = '60%'
-#       elif race == 'White':
-#               data = '20%'
-#       else:
-#               data = '20%'
-#       x = data
-#       return x
-
-#x = output_factors (result)
+def output_factors(result):
+       data = None
+       if features.gender == 'Male':
+               data = '60%'
+       else:
+               data = '80%'
+       x = data
+       return x
+x = output_factors (result)
 
 
 st.sidebar.text ("")
@@ -81,10 +78,10 @@ st.text ("")
 st.write("""
 ## Your chance of contracting Covid is...
 """)
-#st.write (x)
+st.write (x)
 
 st.write("""
-### 60%
+### 60% - This is hardcoded
 """)
 
 #st.write(pd.DataFrame({
