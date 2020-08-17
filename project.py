@@ -41,8 +41,9 @@ def Output_factors(result):
                 data = '20%'
         else:
                 data = '20%'
+        data = data
         return data
-output_df = Output_factors (result)
+output_df = Output_factors ()
 
 st.sidebar.text ("")
 st.sidebar.text ("")
