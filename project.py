@@ -6,21 +6,23 @@ from sklearn import datasets
 
 st.title('COVID AGRAJ Project - COVID Predictor')
 
-def user_input_features():
-        gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
-        age = st.sidebar.selectbox("Select Age group",("0-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75-84", "Above 85"))
-        race = st.sidebar.selectbox("Select your Race",("White", "Black", "Asian", "LatinX", "American Indian/Alaskan Native", "Others"))
-        state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colarado", "Connecticut","Delaware","Florida", "Georgia","Hawaii",
+
+gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
+age = st.sidebar.selectbox("Select Age group",("0-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75-84", "Above 85"))
+race = st.sidebar.selectbox("Select your Race",("White", "Black", "Asian", "LatinX", "American Indian/Alaskan Native", "Others"))
+state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colarado", "Connecticut","Delaware","Florida", "Georgia","Hawaii",
             "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
             "New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
 
-        st.sidebar.text ("")
-        st.sidebar.text ("")
+st.sidebar.text ("")
+st.sidebar.text ("")
 
-        NPI1 = st.sidebar.checkbox ("I wash my hands as per CDC Guidelines")
-        NPI2 = st.sidebar.checkbox ("I practice social distancing as per CDC Guidelines")
-        NPI3 = st.sidebar.checkbox ("I use face coverings as per CDC Guidelines")
+NPI1 = st.sidebar.checkbox ("I wash my hands as per CDC Guidelines")
+NPI2 = st.sidebar.checkbox ("I practice social distancing as per CDC Guidelines")
+NPI3 = st.sidebar.checkbox ("I use face coverings as per CDC Guidelines")
+
+def user_input_features():
         data = {'gender': gender,
                 'age': age,
                 'race': race,
@@ -33,15 +35,15 @@ def user_input_features():
 
 input_df = user_input_features()
 
-#def get_gender(gender):
-##       data = None
-#       if gender == 'Male':
-#              data = '60%'
-#       else:
-#             data = '80%'
-#       x = data
-#       return x
-#output = get_gender(gender)
+def output_factors():
+       data = None
+       if gender == 'Male':
+               data = '60%'
+       else:
+               data = '40%'
+       x = data
+       return x
+output_df = output_factors ()
 
 
 st.sidebar.text ("")
@@ -78,11 +80,11 @@ st.text ("")
 st.write("""
 ## Your chance of dying from Covid is...
 """)
-#st.write (output)
+st.write (output_df)
 
-st.write("""
+#st.write("""
 ### 60%
-""")
+#""")
 
 #st.write(pd.DataFrame({
 #    'Raw score': [1, 2, 3, 4, 5, 6],
