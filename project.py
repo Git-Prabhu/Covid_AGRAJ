@@ -41,11 +41,11 @@ def output_factors(result):
                 data = '20%'
         else:
                 data = '20%'
-        data = data
-        return data
+        x = data
+        return x
 
-data = output_factors (result)
-output_df = output_factors (result)
+x = output_factors (result)
+
 
 st.sidebar.text ("")
 st.sidebar.text ("")
@@ -81,7 +81,7 @@ st.text ("")
 st.write("""
 ## Your chance of contracting Covid is...
 """)
-st.write (output_df)
+st.write (x)
 
 st.write("""
 ### Results will be displayed here...
