@@ -33,7 +33,7 @@ def user_input_features():
 
 input_df = user_input_features()
 
-def Output_factors(result):
+def output_factors(result):
         data = None
         if result == 'Black':
                 data = '60%'
@@ -43,7 +43,9 @@ def Output_factors(result):
                 data = '20%'
         data = data
         return data
-output_df = Output_factors (result)
+
+data = output_factors (result)
+output_df = output_factors (result)
 
 st.sidebar.text ("")
 st.sidebar.text ("")
@@ -79,7 +81,7 @@ st.text ("")
 st.write("""
 ## Your chance of contracting Covid is...
 """)
-st.write (data)
+st.write (output_df)
 
 st.write("""
 ### Results will be displayed here...
