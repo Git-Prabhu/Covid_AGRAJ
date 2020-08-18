@@ -16,18 +16,18 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
 st.sidebar.text ("")
 st.sidebar.text ("")
-NPI1 = st.sidebar.checkbox ("I wash my hands as per CDC Guidelines")
-NPI2 = st.sidebar.checkbox ("I practice social distancing as per CDC Guidelines")
-NPI3 = st.sidebar.checkbox ("I use face coverings as per CDC Guidelines")
+NPI1 = st.sidebar.checkbox ("I follow all CDC guidlines (Washing hands, wearing mask, social distancing)")
+#NPI2 = st.sidebar.checkbox ("I practice social distancing as per CDC Guidelines")
+#NPI3 = st.sidebar.checkbox ("I use face coverings as per CDC Guidelines")
 
 def user_input_features():
         data = {'gender': gender,
                 'age': age,
                 'race': race,
                 'state': state,
-                'NPI1': NPI1,
-                'NPI2': NPI2,
-                'NPI3': NPI3}
+                'NPI1': NPI1}
+                #'NPI2': NPI2,
+                #'NPI3': NPI3}
         features = pd.DataFrame (data,index=[0])
         return features
 
@@ -83,8 +83,18 @@ def output_age():
         return a
 output_df4 = output_age()
 
+def output_NPI():
+        data = None
+        if NPI1 == 1:
+            data = 18
+        else:
+            data = 82
+        b = data
+        return b
+output_df5 = output_NPI()
+
 def aggregate_calc():
-    data = ((output_df1*.40)+(output_df2*.30)+(output_df4*0.30))
+    data = ((output_df1*.25)+(output_df2*.25)+(output_df4*0.25)+(output_df5*0.25))
     z = data
     return z
 output_df3 = aggregate_calc()
