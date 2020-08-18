@@ -146,3 +146,4 @@ fig = go.Figure(go.Indicator(
 fig.update_layout(height = 300)
 #fig.show()
 st.write(fig)
+
