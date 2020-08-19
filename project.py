@@ -25,8 +25,6 @@ NPI1 = st.sidebar.checkbox ("I follow all CDC guidlines (Practice social distanc
 st.sidebar.text ("")
 st.sidebar.text ("")
 
-st.sidebar.button('Submit')
-
 def user_input_features():
         data = {'gender': gender,
                 'age': age,
@@ -216,43 +214,20 @@ output_df3 = aggregate_calc()
 st.sidebar.text ("")
 st.sidebar.text ("")
 
-#st.sidebar.checkbox ("I understand the terms and conditions")
-
-#st.sidebar.text ("")
-
-#st.sidebar.button('Submit')
-
-#image = Image.open('sunrise.jpg')
-#st.Image (image, caption ='Your risk of Covid', use_column_width = True)
-
-#st.header("Image of Guage")
-#filename = "Gauge.png"
-#data = si.get_images().get(filename)
-#st.image(data, caption=filename, output_format="PNG")
-
-#st.text ("")
-#st.text ("")
-#st.text ("")
-#st.text ("")
-
 st.subheader ('User inputs:')
 st.write(input_df)
 
 st.text ("")
 st.text ("")
 
-#st.write(output_df3,'%')
-
-#st.write(pd.DataFrame({
-#    'Raw score': [1, 2, 3, 4, 5, 6],
-#    'Weighted Score': [10, 20, 0, 40, 45, 55],
-#    }))
-
 st.write("""
 ## Mortality Rate:
 """)
 
-cg.render_gauge((int(output_df3)))
+if st.sidebar.button('Submit'):
+    st.write(cg.render_gauge((int(output_df3))))
+
+#cg.render_gauge((int(output_df3)))
 
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = output_df3,
