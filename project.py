@@ -252,7 +252,7 @@ st.write("""
 ## Mortality Rate:
 """)
 
-cg.render_gauge(output_df3)
+cg.render_gauge((int(output_df3)))
 
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = output_df3,
