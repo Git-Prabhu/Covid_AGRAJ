@@ -225,7 +225,8 @@ st.write("""
 """)
 
 if st.sidebar.button('Submit'):
-    st.write(cg.render_gauge((int(output_df3))))
+        cg.render_gauge((int(output_df3)))
+        #st.write(cg.render_gauge((int(output_df3))))
 
 #cg.render_gauge((int(output_df3)))
 
